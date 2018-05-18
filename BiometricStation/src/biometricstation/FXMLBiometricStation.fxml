@@ -6,11 +6,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="890.0" prefWidth="1195.0" styleClass="anchorpane" stylesheets="@cssbiometricstation.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biometricstation.FXMLBiometricStationController">
+<VBox alignment="CENTER" prefHeight="890.0" prefWidth="1195.0" styleClass="vbox" stylesheets="@cssbiometricstation.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="biometricstation.FXMLBiometricStationController">
    <children>
-      <AnchorPane id="AnchorPane" prefHeight="899.0" prefWidth="1199.0" styleClass="anchorpane" stylesheets="@cssbiometricstation.css">
+      <Button fx:id="DataGen" mnemonicParsing="false" onAction="#generateRandomDataHandler" text="Random" />
+      <AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" styleClass="anchorpane" stylesheets="@cssbiometricstation.css" VBox.vgrow="NEVER">
          <children>
-            <LineChart id="LineChartHaertbeat" fx:id="lineChartHaertbeat" layoutX="50.0" layoutY="63.0" prefHeight="228.0" prefWidth="1095.0" stylesheets="@cssbiometricstation.css" title="Haertbeat" verticalGridLinesVisible="false" AnchorPane.bottomAnchor="599.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="40.0">
+            <LineChart id="LineChart" fx:id="lineChartHaertbeat" layoutX="50.0" layoutY="40.0" prefHeight="250.0" prefWidth="1095.0" stylesheets="@cssbiometricstation.css" title="Haertbeat" verticalGridLinesVisible="false" AnchorPane.bottomAnchor="600.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="40.0">
               <xAxis>
                 <NumberAxis maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" side="BOTTOM" />
               </xAxis>
@@ -18,7 +19,7 @@
                 <NumberAxis lowerBound="30.0" side="LEFT" upperBound="240.0" />
               </yAxis>
             </LineChart>
-            <LineChart id="LineChartTemperature" fx:id="lineChartTemperature" layoutX="50.0" layoutY="356.0" prefHeight="249.0" prefWidth="1095.0" stylesheets="@cssbiometricstation.css" title="Temperature" verticalGridLinesVisible="false" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+            <LineChart id="LineChartTemperature" fx:id="lineChartTemperature" layoutX="50.0" layoutY="356.0" prefHeight="250.0" prefWidth="1095.0" stylesheets="@cssbiometricstation.css" title="Temperature" verticalGridLinesVisible="false" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
               <xAxis>
                 <NumberAxis side="BOTTOM" />
               </xAxis>
@@ -26,7 +27,7 @@
                 <NumberAxis side="LEFT" upperBound="40.0" />
               </yAxis>
             </LineChart>
-            <LineChart id="LineChartAccelerometer" fx:id="lineChartAccelerometer" layoutX="24.0" layoutY="594.0" prefHeight="243.0" prefWidth="1095.0" stylesheets="@cssbiometricstation.css" title="Accelerometer" verticalGridLinesVisible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+            <LineChart id="LineChartAccelerometer" fx:id="lineChartAccelerometer" layoutX="24.0" layoutY="594.0" minHeight="-Infinity" prefHeight="250.0" prefWidth="1095.0" stylesheets="@cssbiometricstation.css" title="Accelerometer" verticalGridLinesVisible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
               <xAxis>
                 <NumberAxis side="BOTTOM" />
               </xAxis>
@@ -34,7 +35,6 @@
                 <NumberAxis side="LEFT" />
               </yAxis>
             </LineChart>
-            <Button fx:id="DataGen" layoutX="1121.0" layoutY="-8.0" mnemonicParsing="false" onAction="#generateRandomDataHandler" text="Random" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
          </children>
       </AnchorPane>
    </children>

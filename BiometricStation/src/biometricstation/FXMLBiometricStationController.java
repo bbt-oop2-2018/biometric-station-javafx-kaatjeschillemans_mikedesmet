@@ -84,7 +84,7 @@ public class FXMLBiometricStationController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+       
         temperatureValues = new XYChart.Series();
         temperatureValues.setName("temperature_Meassurements");
         lineChartTemperature.getData().add(temperatureValues);
@@ -98,13 +98,13 @@ public class FXMLBiometricStationController implements Initializable {
         lineChartHaertbeat.getData().add(haertValues);
 
         // Set Axis
-        lineChartTemperature.getYAxis().setLabel("Temperature [celcius]");
+        lineChartTemperature.getYAxis().setLabel("Temperature [°C]");
         lineChartTemperature.getXAxis().setLabel("Measurement");
 
-        lineChartAccelerometer.getYAxis().setLabel("speed [meter/seconds] ");
+        lineChartAccelerometer.getYAxis().setLabel("speed [m/s] ");
         lineChartAccelerometer.getXAxis().setLabel("Measurement");
 
-        lineChartHaertbeat.getYAxis().setLabel("bbm [beats per minit]");
+        lineChartHaertbeat.getYAxis().setLabel("bpm");
         lineChartHaertbeat.getXAxis().setLabel("Measurement");
 
     }
